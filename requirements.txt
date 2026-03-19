@@ -1,0 +1,31 @@
+# MiniChain — Feature Blitz Edition
+# ===================================
+# Setup (avoids externally-managed-environment errors):
+#
+#   python3 -m venv .venv
+#   source .venv/bin/activate       # Windows: .venv\Scripts\activate
+#   pip install -r requirements.txt
+
+# ── Required ──────────────────────────────────────────────────────────────────
+
+# Ed25519 signatures + BLAKE2b (releases GIL → async parallelism works correctly)
+PyNaCl>=1.5.0
+
+# Live TUI dashboard (monitor command)
+rich>=13.0.0
+
+# ── All other dependencies are Python stdlib ──────────────────────────────────
+# asyncio           async parallel validation (§9)
+# concurrent.futures ThreadPoolExecutor for CPU-bound crypto
+# sqlite3           WAL-mode persistence (§8)
+# hashlib           blake2b / sha256 (§2)
+# argparse          CLI (§12)
+# collections       SentinelAI sliding window (§6)
+# dataclasses       Transaction, Block, SentinelReport, ContractResult
+# math              Z-score stddev (§6)
+# struct, json, time, pathlib, logging — core utilities
+
+# ── Optional production upgrades (not required for prototype) ─────────────────
+# RestrictedPython>=7.0   stronger AST-level contract sandboxing (replaces §7 exec)
+# scikit-learn>=1.4       IsolationForest to replace Z-score in SentinelAI (§6)
+# py-libp2p>=0.2.1        real P2P networking (replaces stub node)

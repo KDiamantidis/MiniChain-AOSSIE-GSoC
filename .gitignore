@@ -1,0 +1,15 @@
+# Python environment
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Blockchain data (DO NOT PUSH)
+minichain.db
+minichain.db-wal
+minichain.db-shm
+wallet.key
+
+# System files
+.DS_Store
+
