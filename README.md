@@ -67,7 +67,7 @@ send	    Signs and submits a transfer. Supports --from-genesis for initial fundi
 status	    Direct query of the World State and chain statistics.
 
 ##  🗺️ Roadmap (GSoC 2026 Implementation Plan)
-[ ] P2P Gossip Protocol: Implementing py-libp2p for decentralized node discovery and block propagation.
+[ ] Marabu Protocol Integration: Aligning the p2p networking layer with the official Stability Nexus/MiniChain standards.
 
 [ ] Advanced ML Sentinel: Migrating from Z-score to an IsolationForest machine learning model for complex fraud detection.
 
